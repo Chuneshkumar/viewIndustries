@@ -1,0 +1,17 @@
+body{
+  background: url("../svg/viewIndustries.svg") no-repeat 100% -10%/cover;
+}
+
+.IndustriesTable{
+  max-width:60vw;
+}
+.tableContainer{
+  background-color: transparent !important;
+}
+
+@media (max-width: 991px){
+  .IndustriesTable{
+    max-width:unset;
+  }
+
+}

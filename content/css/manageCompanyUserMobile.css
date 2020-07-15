@@ -1,0 +1,17 @@
+@media (max-width:768px){
+  .afterTable{
+    justify-content: center !important;
+  }
+  .tableCaption{
+    text-align: center;
+  }
+}
+
+@media (max-width:500px){
+  body{
+    overflow-x:hidden;
+  }
+  .tableCaption{
+    text-align: center;
+  }
+}

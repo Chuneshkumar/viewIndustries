@@ -1,0 +1,44 @@
+/* ###################### */
+/* ###  SideBar STYLES  ### */
+/* ##################### */
+nav.adminnavbar{
+  margin-left: 250px;
+  transition: margin-left 0.5s ease;
+  background-color: var(--white) !important;
+  padding: 0.25rem 1rem !important;
+}
+
+.sidebar{
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top:0px;
+  left: 0;
+  overflow-x: hidden;
+  background:#fff;
+  transition: 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+
+#sidebarToggler{
+  position: fixed;
+  top:0px;
+  z-index:20;
+}
+.list-group-item{
+  border:none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.list-group-item-action:focus, .list-group-item-action:hover{
+  background-color: rgba(247, 158, 2, 0.5);
+}
+.list-group-item-action.sidebarLinkactive{
+  color: #856404;
+  background-color: #ffe8a1;
+}
+.dropdownMenu{
+  display: block !important;
+}
