@@ -1,5 +1,12 @@
 body{
-  background: url("../svg/viewIndustries.svg") no-repeat 100% 50%/cover;
+  background: linear-gradient(45deg, #f0f0f0, transparent), url("../svg/viewIndustries.svg") no-repeat 100% 50%/cover;
+
+/* ################## TO SEE IT WITHOUT THE GRADIENT  ################################# */
+
+  /* background: url("../svg/viewIndustries.svg") no-repeat 100% 50%/cover; */
+
+  /* ##########################  SEE ABOVE  ################################# */
+
   /* background: url("../svg/viewIndustries2.svg") no-repeat 100% 100%/cover; */
   /* background: url("../images/bg.png") no-repeat 100% 120%/cover; */
   /* background: url("../images/bg2.png") no-repeat 120% 100%/cover; */
