@@ -90,8 +90,8 @@
   <!-- Add Industry Modal -->
   <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content text-center">
-        <div class="modal-header">
+      <div class="modal-content ">
+        <div class="modal-header text-center">
           <h5 class="modal-title" id="addModalLabel">Add Industry</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -103,8 +103,10 @@
               <label for="addIndustry">Name</label>
               <input type="text" class="form-control" id="addIndustry">
             </div>
-              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-warning"><i class="fas fa-edit"></i> Save Changes</button>
+            <div class="text-center">
+              <!-- <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
+              <button type="submit" class="btn btn-warning "><i class="fas fa-edit"></i> Save Changes</button>
+            </div>
           </form>
         </div>
       </div>
@@ -115,9 +117,16 @@
     <div class="mx-3">
       <div class="container-md">
         <!-- Heading Row -->
-        <div class="row justify-content-center py-3">
+        <div class="row justify-content-center py-2">
           <div class="col-12">
             <h1 class="text-center pageHeading">Industry /<span id="industryCategory">Category</span></h1>
+          </div>
+        </div>
+        <!-- Add Industry Row -->
+        <div class="row py-3">
+          <div class="col-12 text-left IndustriesTable mx-auto">
+            <a title="Add Industry" class="btn btn-warning" data-toggle="modal" data-target="#addModal" href="#"><i class="fa fa-plus"></i> Add Category</a>
+            <!-- <a href="javascript:viod(0);" class="btn btn-warning"><i class="fa fa-plus"></i> Add</a>   -->
           </div>
         </div>
         <!-- Table Row -->
@@ -143,7 +152,7 @@
                 <?php
                   // Get categorical no. of entries in table from Database, if category is specified
                   $TotalEntries = 68;  /* Should get from DB */
-                  $nTotalPages = ceil($TotalEntries / 10); /* Calculating Total pages */
+                  $nTotalPages = ceil($TotalEntries / 5); /* Calculating Total pages */
                    /* Default CurrentPage Setting */
                   if(isset($_GET["page"])) {
                     $PageN = $_GET["page"];
@@ -151,14 +160,14 @@
                   else{
                     $PageN = 1; /* $PageN stands for Page Number or Current Page*/
                   }
-                  $CurrentEntry=$PageN*10-9; /* Calculating first entry for current page */
+                  $CurrentEntry=$PageN*5-4; /* Calculating first entry for current page */
                   /* for last entry in table's currentpage */
                   if($PageN==$nTotalPages){
 
                     $UpperLimit = $CurrentEntry + ($TotalEntries-$CurrentEntry);
                   }
                   else{
-                    $UpperLimit=$CurrentEntry+9;
+                    $UpperLimit=$CurrentEntry+4;
                   }
                   ?>
                   <?php
@@ -172,8 +181,8 @@
                       <td> ZoneTech $a</td>
                       <td> $PresentDate </td>
                       <td class=\"d-flex align-items-center justify-content-around\" >
-                       <a title=\"Edit\" href=\"#\" class=\"tableActionBtn px-2\"><i class=\"fas fa-edit\" data-toggle=\"modal\" data-target=\"#editModal\"></i> Edit</a>
-                       <a title=\"DELETE\" class=\"tableActionBtn px-2\" data-toggle=\"modal\" data-target=\"#deleteModal\" href=\"#\"><i class=\"fas fa-trash\"></i> Delete</a></td>
+                       <a title=\"Edit\" href=\"#\" class=\"tableActionBtn px-2\" data-toggle=\"modal\" data-target=\"#editModal\"><i class=\"fas fa-edit\" ></i> Edit</a>
+                       <a title=\"DELETE\" href=\"#\" class=\"tableActionBtn px-2\" data-toggle=\"modal\" data-target=\"#deleteModal\" ><i class=\"fas fa-trash\"></i> Delete</a></td>
                      </tr>";
                     }
                    ?>
@@ -332,18 +341,12 @@
           </ul>
           </nav>
         </div>
-        <!-- Add Industry Row -->
 
       </div>
     </div>
   </div>
 
-  <div class="row" style="position: fixed; bottom:50px; right: 20px;">
-    <div class="col-12 text-center">
-      <a title="Add Industry" class="btn btn-warning" data-toggle="modal" data-target="#addModal" href="#"><i class="fa fa-plus"></i> Add</a>
-      <!-- <a href="javascript:viod(0);" class="btn btn-warning"><i class="fa fa-plus"></i> Add</a>   -->
-    </div>
-  </div>
+
   <!-- Div for Styling might delete later once footer is installed -->
   <div >
     <h1>&nbsp;</h1>

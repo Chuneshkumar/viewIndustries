@@ -1,5 +1,8 @@
 body{
-  background: url("../svg/viewIndustries.svg") no-repeat 100% -10%/cover;
+  background: url("../svg/viewIndustries.svg") no-repeat 100% 50%/cover;
+  /* background: url("../svg/viewIndustries2.svg") no-repeat 100% 100%/cover; */
+  /* background: url("../images/bg.png") no-repeat 100% 120%/cover; */
+  /* background: url("../images/bg2.png") no-repeat 120% 100%/cover; */
 }
 
 .IndustriesTable{
@@ -9,6 +12,9 @@ body{
   background-color: transparent !important;
 }
 
+.page-item.disabled .page-link, .page-link{
+  background-color: transparent !important;
+}
 @media (max-width: 991px){
   .IndustriesTable{
     max-width:unset;
